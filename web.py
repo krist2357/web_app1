@@ -12,9 +12,11 @@ def add_todo():
 
 todos = functions.get_todos()
 
+st.set_page_config(layout='wide') # expandir
+
 st.title('Mi aplicación To-Do')
 st.subheader('Esta es mi aplicación To-Do')
-st.write('Esta aplicación es para incrementar la productividad')
+st.write('Esta aplicación es para incrementar la <b>productividad<b/>.',unsafe_allow_html=True)
 
 # Lee lo que esta en el archivo .txt.
 for index, todo in enumerate(todos): # enumero los todos
